@@ -1,0 +1,8 @@
+2026-05-22 07:40:59,538 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-22 07:40:59,924 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-05-22 07:59:25,993 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-22 07:59:26,428 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-05-28 07:33:53,666 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-28 07:33:54,495 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-05-28 13:58:54,299 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-28 13:58:54,824 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
