@@ -1,2 +1,0 @@
-2026-05-29 07:41:16,534 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
-2026-05-29 07:41:16,599 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
