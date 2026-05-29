@@ -1,15 +1,14 @@
 <!-- Sync Impact Report
-Version change: (none) → 1.0.0
-Modified principles: N/A — initial fill from template
-Added sections: All (Core Principles, Development Standards, Quality Gates, Governance)
-Removed sections: None
+Version change: 1.0.0 → 1.1.0
+Modified principles: Development Standards — resolved TODO(TECH_STACK), added French docstring rule
+Added sections: none
+Removed sections: none
 Templates requiring updates:
   - .specify/templates/plan-template.md ✅ reviewed — Constitution Check gate already present
   - .specify/templates/spec-template.md ✅ reviewed — no updates needed
   - .specify/templates/tasks-template.md ✅ reviewed — no updates needed
-  - .specify/templates/commands/ ⚠ no command files found — skipped
-Follow-up TODOs:
-  - TODO(TECH_STACK): Confirm primary language, framework, and runtime versions
+  - .specify/templates/commands/ ✅ reviewed — no outdated agent-specific references
+Follow-up TODOs: none — all placeholders resolved
 -->
 
 # mr_agent Constitution
@@ -68,12 +67,16 @@ primary debugging surface for AI-driven systems.
 
 ## Development Standards
 
-TODO(TECH_STACK): Confirm primary language, framework, and runtime versions for this project.
-
-- All code MUST pass linting and formatting checks before merge.
-- Dependencies MUST be pinned to exact versions in lock files.
-- Secrets MUST NOT be committed; use `.env` (gitignored) for local configuration.
-- ChromaDB collections MUST be named consistently and documented in `docs/`.
+- **Language**: Python 3.9+ | **Package Manager**: `uv` | **Runtime**: CPython
+- **Testing**: pytest — unit, integration, and contract tests under `tests/`
+- **Linting & Formatting**: Ruff (`ruff check` + `ruff format`) — MUST pass before merge
+- **AI Engine**: Claude Code via Anthropic API (key in `.env` as `ANTHROPIC_API_KEY`)
+- **Vector Store**: ChromaDB — collections persisted in `chroma_db/`, named consistently,
+  documented in `docs/`
+- All docstrings MUST be written in French — applies to all source code and tests without
+  exception.
+- Dependencies MUST be pinned to exact versions in `pyproject.toml` lock files.
+- Secrets MUST NOT be committed; use `.env` (gitignored) with `.env.example` as template.
 
 ## Quality Gates
 
@@ -105,4 +108,4 @@ Complexity violations MUST be justified in the plan before implementation begins
 **Compliance review**: Each `/speckit-plan` execution MUST re-evaluate the Constitution Check
 gate against the current version of this document.
 
-**Version**: 1.0.0 | **Ratified**: 2026-05-28 | **Last Amended**: 2026-05-28
+**Version**: 1.1.0 | **Ratified**: 2026-05-28 | **Last Amended**: 2026-05-28
